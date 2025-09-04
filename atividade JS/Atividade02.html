@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boas-Vindas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #fff0f5;
+        }
+
+        h1 {
+            color: #f48fb1;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f8bbd0;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f48fb1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bem-vindo!</h1>
+    <button onclick="boasVindas()">Clique aqui</button>
+
+    <script>
+        function boasVindas() {
+            let nome = prompt("Qual é o seu nome?");
+            if (nome) {
+                let idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+                if (idade) {
+                    alert(`Que maravilha! ${nome} tem ${idade} anos!`);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

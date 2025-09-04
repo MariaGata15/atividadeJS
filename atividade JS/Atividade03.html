@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Antes e Depois</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #fff0f5;
+        }
+
+        h1 {
+            color: #f48fb1;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f8bbd0;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f48fb1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Antes e Depois</h1>
+    <button onclick="mostrarAntecessorSucessor()">Digite um número</button>
+
+    <script>
+        function mostrarAntecessorSucessor() {
+            let num = parseInt(prompt("Digite um número inteiro:"));
+            if (!isNaN(num)) {
+                let antes = num - 1;
+                let depois = num + 1;
+                alert(`O antecessor de ${num} é ${antes} e o sucessor é ${depois}.`);
+            } else {
+                alert("Por favor, digite um número válido.");
+            }
+        }
+    </script>
+</body>
+
+</html>

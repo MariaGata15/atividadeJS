@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Troco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #fff0f5;
+        }
+
+        h1 {
+            color: #f48fb1;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f8bbd0;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f48fb1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora de Troco</h1>
+    <button onclick="calcularTroco()">Comprar Produto</button>
+
+    <script>
+        function calcularTroco() {
+            let produto = prompt("Qual produto está sendo comprado?");
+            if (!produto) return;
+
+            let preco = parseFloat(prompt(`Qual o preço de ${produto}`));
+
+            if (isNaN(preco)) {
+                alert("Preço inválido.");
+                return;
+            }
+
+            let dinheiro = parseFloat(prompt(`Quanto em dinheiro o cliente deu para pagar o(a) ${produto}      +`));
+            if (isNaN(dinheiro)) {
+                alert("Valor em dinheiro inválido.");
+                return;
+            }
+
+            let troco = dinheiro - preco;
+
+            if (troco < 0) {
+                alert(`O valor fornecido é insuficiente.Faltam R$${Math.abs(troco).toFixed(2)}`);
+            } else {
+                alert(`Você comprou ${produto}, que custa R$${preco.toFixed(2)}.Deu R$${dinheiro.toFixed(2)} em dinheiro e vai receber R$${troco.toFixed(2)} de troco! Volte sempre!`);
+            }
+        }
+    </script>
+</body>
+
+</html>
