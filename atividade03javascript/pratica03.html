@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividades com JavaScript</title>
+</head>
+<body>
+
+  <!-- Atividade 1: Saudação -->
+  <h2>Atividade 1: Saudação</h2>
+  <p id="saudacao"></p>
+
+  <!-- Atividade 2: Contador de Cliques -->
+  <h2>Atividade 2: Contador de Cliques</h2>
+  <button onclick="incrementarContador()">Clique aqui</button>
+  <p id="contadorCliques">O botão já foi clicado 0 vezes.</p>
+
+  <!-- Atividade 3: Verificação de Maioridade -->
+  <h2>Atividade 3: Verificação de Maioridade</h2>
+  <p id="verificacaoIdade"></p>
+
+  <script>
+    // Atividade 1: Saudação
+    let nomeUsuario = prompt("Maria Clara :");
+    document.getElementById("saudacao").innerText = `Olá, ${nomeUsuario}! É um prazer ter você aqui.`;
+
+    // Atividade 2: Contador de Cliques
+    let contador = 0;
+    function incrementarContador() {
+      contador++;
+      document.getElementById("contadorCliques").innerText = `O botão já foi clicado ${contador} vezes.`;
+    }
+
+    // Atividade 3: Verificação de Maioridade
+    let idade = prompt("Digite a sua idade:");
+    idade = Number(idade); // Converte para número
+
+    if (!isNaN(idade)) {
+      if (idade >= 18) {
+        document.getElementById("verificacaoIdade").innerText = "Você é maior de idade.";
+      } else {
+        document.getElementById("verificacaoIdade").innerText = "Você é menor de idade.";
+      }
+    } else {
+      document.getElementById("verificacaoIdade").innerText = "Idade inválida.";
+    }
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
